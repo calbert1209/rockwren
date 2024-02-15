@@ -14,9 +14,12 @@ jobs:
     strategy:
       matrix:
         package: [foo, bar, baz]
+        include:
+          - subpackage: bizz
+            package: baz
 
     steps:
       - uses: actions/checkout@v3
 
       - name: Run a one-line script
-        run: echo "${{matrix.package}} - Hello, world!"
+        run: echo "${{matrix.package}} - ${{matrix.subpackage}} - Hello, world!"
