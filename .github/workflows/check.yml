@@ -1,5 +1,5 @@
 
-name: Sample CI
+name: Sample Pre-Deploy Check
 
 on:
   workflow_dispatch:
