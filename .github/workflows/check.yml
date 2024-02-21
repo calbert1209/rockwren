@@ -1,0 +1,22 @@
+
+name: Sample CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Wait commit status
+        uses: cloudposse/github-action-wait-commit-status@main
+        with:
+          repository: ${{ github.repository }}
+          sha: ${{ github.sha }}
+          status: continuous-delivery/example-app
+          lookup: "success"
+          token: ${{ github.token }}
+          check-timeout: 120
+          check-retry-count: 5
+          check-retry-interval: 20
