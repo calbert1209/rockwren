@@ -14,7 +14,7 @@ jobs:
         with:
           repository: ${{ github.repository }}
           sha: ${{ github.sha }}
-          status: "Sample CI"
+          status: "foo-bar-baz-checks"
           expected_state: "success"
           token: ${{ github.token }}
           check-retry-count: 5
