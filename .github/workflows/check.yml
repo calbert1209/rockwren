@@ -14,8 +14,8 @@ jobs:
         with:
           repository: ${{ github.repository }}
           sha: ${{ github.sha }}
-          status: continuous-delivery/example-app
-          expected-state: "success"
+          status: "Sample CI / build (foo) (push)"
+          expected_state: "success"
           token: ${{ github.token }}
           check-retry-count: 5
           check-retry-interval: 20
