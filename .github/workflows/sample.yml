@@ -23,5 +23,3 @@ jobs:
 
       - name: Run a one-line script
         run: echo "${{matrix.package}} - ${{matrix.subpackage}} - Hello, world!"
-      - name: Report stuff
-        run: echo "${{ toJSON(github) }}
